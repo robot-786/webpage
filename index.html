@@ -14,14 +14,15 @@
     
     body {
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       height: 100vh;
       font-family: Arial, sans-serif;
       color: #fff;
-      background: linear-gradient(45deg, #0f2027, #203a43, #2c5364);
+      background: linear-gradient(45deg, #FFBA08, #F48C06, #DC2F02, #370617);
       background-size: 300% 300%;
-      animation: gradientAnimation 10s ease infinite;
+      animation: gradientAnimation 8s ease infinite;
       overflow: hidden;
     }
     
@@ -36,28 +37,49 @@
     h1 {
       font-size: 3rem;
       text-align: center;
-      color: #fff;
-      background: -webkit-linear-gradient(#ff416c, #ff4b2b);
+      color: #FFD60A;
+      background: -webkit-linear-gradient(#FFD60A, #FF9F1C);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      animation: glow 2s infinite alternate;
+      text-shadow: 0 0 5px #FFBA08, 0 0 10px #FF9F1C;
+      margin-bottom: 20px;
     }
-    
-    /* Glow animation */
-    @keyframes glow {
-      from { text-shadow: 0 0 10px #ff416c, 0 0 20px #ff416c, 0 0 30px #ff4b2b, 0 0 40px #ff4b2b; }
-      to { text-shadow: 0 0 20px #ff416c, 0 0 30px #ff416c, 0 0 40px #ff4b2b, 0 0 50px #ff4b2b; }
+
+    /* Button styling */
+    button {
+      font-size: 2rem;
+      padding: 15px 30px;
+      color: #fff;
+      background-color: #DC2F02;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      text-transform: uppercase;
+      box-shadow: 0 5px 15px rgba(220, 47, 2, 0.3);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-    
-    /* Additional styling for responsive look */
+
+    button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(220, 47, 2, 0.4);
+      background-color: #B83200;
+    }
+
+    /* Responsive font size for smaller screens */
     @media (max-width: 768px) {
       h1 {
         font-size: 2.5rem;
+      }
+      button {
+        font-size: 1.5rem;
+        padding: 10px 20px;
       }
     }
   </style>
 </head>
 <body>
   <h1>CR || GR please ICT lab ki assignment ki date extend krwado</h1>
+  <button onclick="alert('Please!')">Please</button>
 </body>
 </html>
+
